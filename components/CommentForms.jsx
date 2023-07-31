@@ -4,7 +4,6 @@ import { submitComment } from "../services";
 const CommentForms = ({ slug }) => {
   const [error, setError] = useState(false);
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
-  const [localStorage, setLocalStorage] = useState(null);
   const nameElement = useRef();
   const emailElement = useRef();
   const commentElement = useRef();

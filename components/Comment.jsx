@@ -7,7 +7,7 @@ const Comment = ({ slug }) => {
   const [comments, setComments] = useState([]);
   useEffect(() => {
     getComments(slug).then((result) => setComments(result));
-  }, []);
+  }, [slug]);
   return (
   <>
     {comments.length > 0 && (

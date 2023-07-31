@@ -4,6 +4,7 @@ import moment from "moment";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 
+
 const PostCard = ({ post }) => {
   return (
     <div className="bg-gray-100 text-gray-800 rounded-lg mb-4 p-2 md:p-4">
@@ -11,6 +12,7 @@ const PostCard = ({ post }) => {
         <img
           src={post.featuredImage.url}
           alt={post.title}
+          fill
           className="object-cover rounded-lg absolute object-top h-80 w-full "
         />
       </div>
@@ -22,6 +24,7 @@ const PostCard = ({ post }) => {
           <img
             src={post.authors[0].photo.url}
             alt={post.authors.name}
+            fill
             className="rounded-full object-cover h-[30px] w-[30px]"
           />
         </div>

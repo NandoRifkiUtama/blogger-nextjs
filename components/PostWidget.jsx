@@ -4,6 +4,7 @@ import moment from "moment";
 import { getRecentPosts, getSimilarPosts } from "../services";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 
+
 const PostWidget = ({ categories, slug }) => {
   const [relatedPost, setRelatedPost] = useState([]);
   useEffect(() => {
@@ -14,7 +15,7 @@ const PostWidget = ({ categories, slug }) => {
     } else {
       getRecentPosts().then((result) => setRelatedPost(result));
     }
-  }, [slug]);
+  }, [categories]);
   return (
     <div className="bg-gray-100 text-gray-800 rounded-lg mb-4 p-2 md:p-4">
       <h3 className="font-semibold p-3 border-b border-gray-400">{slug ? "Related Post" : "Recent Post"}</h3>

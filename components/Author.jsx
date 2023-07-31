@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const Author = ({ author }) => {
   return (
     <div className="bg-black/60 flex flex-col items-center justify-center px-4 py-6 mt-4 rounded-lg gap-2">
@@ -11,7 +12,9 @@ const Author = ({ author }) => {
         />
       </div>
       <h3 className="text-gray-200 font-semibold">{author[0].name}</h3>
-      <p className="text-center text-xs text-gray-300 md:w-[500px]">{author[0].bio}</p>
+      <p className="text-center text-xs text-gray-300 md:w-[500px]">
+        {author[0].bio}
+      </p>
     </div>
   );
 };
